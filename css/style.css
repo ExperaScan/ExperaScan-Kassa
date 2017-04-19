@@ -1,0 +1,29 @@
+html, body {
+	font-family: Helvetica;
+}
+
+#cameraContainer {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+#productsTable {
+	border-collapse: collapse;
+}
+
+#productsTable th, td {
+	text-align: left;
+	padding: 5px;
+	border: 1px solid #dddddd;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+@media print {
+	#cameraContainer {
+		display: none;
+	}
+}
