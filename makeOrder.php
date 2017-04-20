@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/defines.js"></script>
 		<script type="text/javascript" src="js/api.js"></script>
 		<script type="text/javascript" src="js/reusableFunctions.js"></script>
 
@@ -36,11 +37,13 @@
 		<script type="text/javascript" src="js/page/makeOrder.js"></script>
 	</head>
 	<body>
-		<h1>Experascan Kassa</h1>
+		<img src="img/spar.JPG" width="300" />
 		<div id="cameraContainer">
 			<video  id="camsource" autoplay width="320" height="240">Geen camera</video>
 			<canvas id="qr-canvas" width="320" height="240" style="display:none"></canvas>
 		</div>
+		<br>
+		<button id="newOrder">Nieuwe order</button>
 		<p id="qr-value" style="display: none;"></p>
 		<p id="qr-code"></p>
 		<table id="productsTable">
@@ -52,5 +55,7 @@
 		</table>
 		<h2>Totaal: €<span id="totalPrice">0.00</span></h2>
 		<button id="placeOrder">Afrekenen</button>
+
+		<div id="orderCode"></div>
 	</body>
 </html>

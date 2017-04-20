@@ -1,0 +1,1 @@
+var SELLER_ID = 1;

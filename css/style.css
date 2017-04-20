@@ -26,4 +26,12 @@ tr:nth-child(even) {
 	#cameraContainer {
 		display: none;
 	}
+
+	#placeOrder {
+		display: none;
+	}
+
+	#newOrder {
+		display: none;
+	}
 }

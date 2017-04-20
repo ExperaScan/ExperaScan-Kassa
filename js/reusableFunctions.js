@@ -43,5 +43,9 @@ var reusableFunctions = {
 			}
 		});
 		return returnArray;
+	},
+
+	toTwoDecimals: function(number) {
+		return parseFloat(Math.round(number * 100) / 100).toFixed(2);
 	}
 }

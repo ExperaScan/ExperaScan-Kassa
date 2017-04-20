@@ -18,9 +18,14 @@
 		}
 
 		// Run a query
-		function query($sql) {
+		function query($sql, $returnId = false) {
 			$result = $this->conn->query($sql);
-			return $result;
+			if ($returnId && $result === TRUE) {
+				return $this->conn->insert_id;
+			} else {
+				return $result;
+			}
+			
 		}
 	}
 ?>
