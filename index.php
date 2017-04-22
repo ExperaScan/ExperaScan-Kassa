@@ -5,10 +5,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>JSQRCode Scanner Demo</title>
-
+		<title>Experascan Kassa</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+
 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/defines.js"></script>
+		<script type="text/javascript" src="js/api.js"></script>
+		<script type="text/javascript" src="js/reusableFunctions.js"></script>
 
 		<script type="text/javascript" src="js/lib/jsqrcode/grid.js"></script>
 		<script type="text/javascript" src="js/lib/jsqrcode/version.js"></script>
@@ -31,12 +34,28 @@
 		<script type="text/javascript" src="js/qr.js"></script>
 		<script type="text/javascript" src="js/camera.js"></script>
 		<script type="text/javascript" src="js/initCamera.js"></script>
+		<script type="text/javascript" src="js/page/makeOrder.js"></script>
 	</head>
 	<body>
-		<h1>JSQRCode Scanner Demo</h1>
-		<p>Hold a QR Code in front of your webcam.</p>
-		<video  id="camsource" autoplay width="320" height="240">Put your fallback message here.</video>
-		<canvas id="qr-canvas" width="320" height="240" style="display:none"></canvas>
-		<h3 id="qr-value"></h3>
+		<img src="img/spar.JPG" width="300" />
+		<div id="cameraContainer">
+			<video  id="camsource" autoplay width="320" height="240">Geen camera</video>
+			<canvas id="qr-canvas" width="320" height="240" style="display:none"></canvas>
+		</div>
+		<br>
+		<button id="newOrder">Nieuwe order</button>
+		<p id="qr-value" style="display: none;"></p>
+		<p id="qr-code"></p>
+		<table id="productsTable">
+			<tr>
+				<th>Product</th>
+				<th>Prijs</th>
+				<th>Houdbaarheidsdatum</th>
+			</tr>
+		</table>
+		<h2>Totaal: €<span id="totalPrice">0.00</span></h2>
+		<button id="placeOrder">Afrekenen</button>
+
+		<div id="orderCode"></div>
 	</body>
 </html>
